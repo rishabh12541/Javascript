@@ -19,3 +19,23 @@ let multiplySecond = function(x) {
 
 let multiplyValue = multiplySecond(2);
 multiplyValue(3);
+
+console.log(this)
+
+let obj = {
+    name: 'Rishabh',
+    lastName: 'Bindal',
+    printMyName: function() {
+        console.log(this)
+    }
+}
+
+obj.printMyName();
+
+
+// ===================================================================================================================================
+function value() {
+    console.log(this) // This will print many other things in node environment, but will print window object in browser.
+}
+
+value()
